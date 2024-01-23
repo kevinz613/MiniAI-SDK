@@ -14,7 +14,6 @@ public class Image {
      * 图片大小
      *
      * @author zhuang.zhi
-     * @date 2024/01/19
      */
     @Getter
     @AllArgsConstructor
@@ -23,14 +22,13 @@ public class Image {
         SIZE_512("512x512"),
         SIZE_1024("1024x1024"),
         ;
-        private String code;
+        private final String code;
     }
 
     /**
      * 响应格式
      *
      * @author zhuang.zhi
-     * @date 2024/01/19
      */
     @Getter
     @AllArgsConstructor
@@ -40,7 +38,7 @@ public class Image {
         B64_JSON("b64_json"),
         ;
 
-        private String code;
+        private final String code;
     }
 
 }

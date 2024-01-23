@@ -14,6 +14,7 @@ import java.io.Serializable;
  *
  * @author zhuang.zhi
  */
+@EqualsAndHashCode(callSuper = true)
 @Slf4j
 @Data
 @AllArgsConstructor

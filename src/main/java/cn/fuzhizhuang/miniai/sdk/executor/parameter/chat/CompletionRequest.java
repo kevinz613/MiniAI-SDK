@@ -13,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 对话请求参数
@@ -92,12 +91,6 @@ public class CompletionRequest implements Serializable {
     @JsonProperty("presence_penalty")
     @Builder.Default
     private double presencePenalty = 0;
-
-    /**
-     * 生成多个调用结果，只显示最佳的。这样会更多消耗api token
-     */
-    @JsonProperty("logit_bias")
-    private Map logitBias;
 
     /**
      * 可供模型调用的工具列表,tools字段会计算 tokens ，同样受到tokens长度的限制

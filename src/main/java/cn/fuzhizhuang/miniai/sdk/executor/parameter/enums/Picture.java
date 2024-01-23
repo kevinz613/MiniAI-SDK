@@ -13,6 +13,6 @@ public class Picture {
         TEXT("text"),
         ;
 
-        private String value;
+        private final String value;
     }
 }
