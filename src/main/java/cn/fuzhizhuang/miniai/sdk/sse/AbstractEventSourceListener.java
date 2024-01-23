@@ -8,8 +8,6 @@ import okhttp3.sse.EventSourceListener;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.concurrent.CountDownLatch;
-
 /**
  * 定义抽象事件监听器
  *
