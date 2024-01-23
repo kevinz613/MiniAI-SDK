@@ -4,8 +4,6 @@ import cn.fuzhizhuang.miniai.sdk.client.AiStreamClient;
 import cn.fuzhizhuang.miniai.sdk.client.Configuration;
 import cn.fuzhizhuang.miniai.sdk.executor.Executor;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionRequest;
-import cn.fuzhizhuang.miniai.sdk.executor.parameter.image.ImageRequest;
-import cn.fuzhizhuang.miniai.sdk.executor.parameter.image.ImageResponse;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.picture.PictureRequest;
 import okhttp3.OkHttpClient;
 import okhttp3.sse.EventSource;

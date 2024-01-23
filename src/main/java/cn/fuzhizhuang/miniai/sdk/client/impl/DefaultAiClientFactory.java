@@ -5,7 +5,6 @@ import cn.fuzhizhuang.miniai.sdk.client.AiClientFactory;
 import cn.fuzhizhuang.miniai.sdk.client.AiStreamClient;
 import cn.fuzhizhuang.miniai.sdk.client.Configuration;
 import cn.fuzhizhuang.miniai.sdk.executor.Executor;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.ChatglmApi;
 import cn.fuzhizhuang.miniai.sdk.interceptor.HttpInterceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

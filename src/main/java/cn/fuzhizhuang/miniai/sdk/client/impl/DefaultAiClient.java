@@ -3,28 +3,12 @@ package cn.fuzhizhuang.miniai.sdk.client.impl;
 import cn.fuzhizhuang.miniai.sdk.client.AiClient;
 import cn.fuzhizhuang.miniai.sdk.client.Configuration;
 import cn.fuzhizhuang.miniai.sdk.executor.Executor;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.Role;
-import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.ChatChoice;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionRequest;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionResponse;
-import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.Message;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.image.ImageRequest;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.image.ImageResponse;
-import cn.fuzhizhuang.miniai.sdk.executor.parameter.picture.PictureRequest;
-import com.alibaba.fastjson2.JSON;
-import io.reactivex.Single;
-import okhttp3.OkHttpClient;
-import okhttp3.Response;
-import okhttp3.sse.EventSource;
-import okhttp3.sse.EventSourceListener;
-import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.concurrent.CompletableFuture;
 
 /**
  * 默认实现，策略模式实现AI模型调用

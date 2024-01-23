@@ -2,7 +2,6 @@ package cn.fuzhizhuang.miniai.sdk.client;
 
 import cn.fuzhizhuang.miniai.sdk.executor.Executor;
 import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.ChatGLMModelExecutor;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.ChatglmApi;
 import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.config.ChatGLMConfig;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.enums.Model;
 import lombok.Data;
