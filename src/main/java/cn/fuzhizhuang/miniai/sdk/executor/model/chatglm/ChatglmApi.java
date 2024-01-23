@@ -2,7 +2,6 @@ package cn.fuzhizhuang.miniai.sdk.executor.model.chatglm;
 
 import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.ChatGLMCompletionRequest;
 import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.ChatGLMCompletionResponse;
-import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionResponse;
 import io.reactivex.Single;
 import retrofit2.http.Body;
 import retrofit2.http.POST;

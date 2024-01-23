@@ -21,7 +21,7 @@ public class Tool {
 
     @Getter
     @AllArgsConstructor
-    public static enum Type {
+    public enum Type {
         function("function", "函数功能"),
         retrieval("retrieval", "知识库"),
         web_search("web_search", "联网"),
