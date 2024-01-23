@@ -5,10 +5,7 @@ import cn.fuzhizhuang.miniai.sdk.client.Configuration;
 import cn.fuzhizhuang.miniai.sdk.executor.Executor;
 import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.config.ChatGLMConfig;
 import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.utils.BearerTokenUtils;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.ChatGLMCompletionRequest;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.ChatGLMCompletionResponse;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.ChatGLMImageRequest;
-import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.EventType;
+import cn.fuzhizhuang.miniai.sdk.executor.model.chatglm.valobj.*;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.CompletionParameterHandler;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.ImageParameterHandler;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionRequest;
@@ -114,12 +111,12 @@ public class ChatGLMModelExecutor implements Executor, CompletionParameterHandle
 
     @Override
     public ImageResponse generateImages(ImageRequest imageRequest) throws Exception {
-        return null;
-    }
-
-    @Override
-    public ImageResponse generateImages(String apiHostByUser, String apiKeyByUser, ImageRequest imageRequest) throws Exception {
-        return null;
+        ChatGLMImageRequest glmImageRequest = convertImageParameter(imageRequest);
+        ChatglmApi chatglmApi = new BuildApiUtils(configuration).getChatglmApi();
+        ChatGLMImageResponse response = chatglmApi.generateImages(glmImageRequest).blockingGet();
+        ImageResponse imageResponse = new ImageResponse();
+        BeanUtil.copyProperties(response, imageResponse);
+        return imageResponse;
     }
 
     @Override

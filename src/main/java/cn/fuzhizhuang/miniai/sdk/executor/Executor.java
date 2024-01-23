@@ -58,17 +58,6 @@ public interface Executor {
      */
     ImageResponse generateImages(ImageRequest imageRequest) throws Exception;
 
-    /**
-     * 生成图像
-     *
-     * @param apiHostByUser apiHost
-     * @param apiKeyByUser  apiKey
-     * @param imageRequest  图像请求
-     * @return 图像响应
-     * @throws Exception 异常
-     */
-    ImageResponse generateImages(String apiHostByUser, String apiKeyByUser, ImageRequest imageRequest) throws Exception;
-
 
     /**
      * 图片理解

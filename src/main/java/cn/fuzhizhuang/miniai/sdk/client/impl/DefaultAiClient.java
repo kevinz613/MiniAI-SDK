@@ -7,6 +7,7 @@ import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionRequest;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.chat.CompletionResponse;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.image.ImageRequest;
 import cn.fuzhizhuang.miniai.sdk.executor.parameter.image.ImageResponse;
+
 import java.util.Map;
 import java.util.Objects;
 
@@ -41,15 +42,14 @@ public class DefaultAiClient implements AiClient {
     }
 
 
-
     @Override
     public ImageResponse generateImages(ImageRequest imageRequest) throws Exception {
-        return generateImages(null, null, imageRequest);
-    }
-
-    @Override
-    public ImageResponse generateImages(String apiHostByUser, String apiKeyByUser, ImageRequest imageRequest) throws Exception {
-        return executorGroup.get(imageRequest.getModel()).generateImages(apiHostByUser, apiKeyByUser, imageRequest);
+        Executor executor = executorGroup.get(imageRequest.getModel());
+        if (Objects.isNull(executor)) {
+            throw new RuntimeException(imageRequest.getModel().concat(" 模型执行器尚未实现!"));
+        }
+        //返回执行结果
+        return executor.generateImages(imageRequest);
     }
 
 }
