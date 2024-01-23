@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class BuildApiUtils {
-    private Configuration configuration;
+    private final Configuration configuration;
 
     public BuildApiUtils(Configuration configuration) {
         this.configuration = configuration;
