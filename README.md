@@ -5,7 +5,7 @@
 [智谱 ChatGLM 系列模型](https://open.bigmodel.cn/overview)
 * [x] 流式问答
 * [x] 同步问答
-* [ ] 图像生成
+* [x] 图像生成
 
 
 [阿里通义千问系列模型](https://help.aliyun.com/document_detail/2400395.html)
